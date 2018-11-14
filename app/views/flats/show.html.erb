@@ -4,4 +4,6 @@
 <p>Max number of guests: <%= @flat.number_of_guests %></p>
 <p><%= @flat.description %></p>
 
-<%= link_to 'Go back', flats_path %>
+<%= link_to 'Edit flat', edit_flat_path(@flat) %> | <%= link_to 'Delete flat', flat_path(@flat),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %> | <%= link_to 'Go back', flats_path %>
